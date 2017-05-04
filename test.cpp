@@ -1,6 +1,6 @@
 #include<iostream>
 #include<Python.h>
-#include"sample.h"
+#include"derived.h"
 using namespace std;
 
 int main(){
@@ -16,7 +16,7 @@ int main(){
   PyObject* result = PyObject_CallMethod(path,"append","(s)",".");
   Py_XDECREF(result);
 
-  PyObject* m = PyInit_sample();
+  PyObject* m = PyInit_derived();
   if (m==NULL) {
     cout << "Module initialization failed!\n";
     if (PyErr_Occurred()) {
