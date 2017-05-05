@@ -6,6 +6,6 @@ environ["CXX"]="g++"
 environ["CC"]="gcc"
 
 setup(ext_modules = cythonize(
-           "derived.pyx",                 # our Cython source # additional source file(s)
+           ['*.pyx', '*.pxd'],
            language="c++",             # generate C++ code
       ))
